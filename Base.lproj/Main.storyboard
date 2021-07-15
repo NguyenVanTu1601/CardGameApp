@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CardGameApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="uRO-da-u3n">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gsC-bB-vYk">
+                                <rect key="frame" x="44" y="0.0" width="808" height="393"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Uat-sa-MM5">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="lug-Oo-zG9" customClass="CardCollectionViewCell" customModule="CardGameApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UNY-oU-Rh3">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card14" translatesAutoresizingMaskIntoConstraints="NO" id="gc0-kQ-Jjy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="YpS-y4-ive">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gc0-kQ-Jjy" firstAttribute="top" secondItem="UNY-oU-Rh3" secondAttribute="top" id="560-4t-rVv"/>
+                                                <constraint firstItem="gc0-kQ-Jjy" firstAttribute="leading" secondItem="UNY-oU-Rh3" secondAttribute="leading" id="964-Qd-CUK"/>
+                                                <constraint firstItem="YpS-y4-ive" firstAttribute="leading" secondItem="UNY-oU-Rh3" secondAttribute="leading" id="AdI-GK-Iqq"/>
+                                                <constraint firstAttribute="trailing" secondItem="YpS-y4-ive" secondAttribute="trailing" id="AhE-8U-9l8"/>
+                                                <constraint firstItem="YpS-y4-ive" firstAttribute="top" secondItem="UNY-oU-Rh3" secondAttribute="top" id="HIV-os-NtN"/>
+                                                <constraint firstAttribute="bottom" secondItem="YpS-y4-ive" secondAttribute="bottom" id="TcS-z9-mas"/>
+                                                <constraint firstAttribute="trailing" secondItem="gc0-kQ-Jjy" secondAttribute="trailing" id="d9D-f6-VzR"/>
+                                                <constraint firstAttribute="bottom" secondItem="gc0-kQ-Jjy" secondAttribute="bottom" id="wJP-p5-RTN"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="120" height="170"/>
+                                        <connections>
+                                            <outlet property="backImageView" destination="YpS-y4-ive" id="cBb-Eq-5y4"/>
+                                            <outlet property="frontImageView" destination="gc0-kQ-Jjy" id="pY4-tA-VH1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uRO-da-u3n" secondAttribute="trailing" id="2QA-Fh-bbT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gsC-bB-vYk" secondAttribute="bottom" id="7R2-T8-Fhq"/>
+                            <constraint firstAttribute="bottom" secondItem="uRO-da-u3n" secondAttribute="bottom" id="D9a-La-gs9"/>
+                            <constraint firstItem="uRO-da-u3n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DUq-my-j67"/>
+                            <constraint firstItem="gsC-bB-vYk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eaz-j8-alE"/>
+                            <constraint firstItem="uRO-da-u3n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hFd-rw-BCP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gsC-bB-vYk" secondAttribute="trailing" id="jmD-Yc-efb"/>
+                            <constraint firstItem="gsC-bB-vYk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="roK-0I-5Bx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="gsC-bB-vYk" id="a7s-nP-zin"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="69"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="414" height="896"/>
+        <image name="back" width="120" height="170"/>
+        <image name="card14" width="120" height="170"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
