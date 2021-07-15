@@ -37,6 +37,8 @@ class CardModel {
             cards.append(CardOne)
             cards.append(CardTwo)
             
+            //Logging
+            print("number card random : \(i)")
         }
         
         // xáo trộn đưa vào mảng
@@ -44,6 +46,10 @@ class CardModel {
         
         // trả về mảng card gồm 16 thẻ
         return cards
+    }
+    
+    func setCard() {
+        
     }
     
 }

@@ -35,6 +35,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+         print("Cell index : \(indexPath)")
         // lấy một ô
         // CardCell là thằng cardCell trong CollectionView đã dược identifier
         
