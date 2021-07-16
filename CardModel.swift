@@ -2,7 +2,7 @@
 //  CardModel.swift
 //  CardGameApp
 //
-//  Created by Nguyen Huu Tien on 7/15/21.
+//  Created by Nguyen Van Tu on 7/15/21.
 //
 
 import Foundation
